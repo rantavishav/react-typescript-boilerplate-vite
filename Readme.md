@@ -28,6 +28,7 @@ This is a basic boilerplate for a React project using TypeScript and [Vite](http
 
 - If you want to use other packages which are written in JavaScript, you need to install their @types versions as well to use them with TypeScript.
 - Make sure you have correctly set up the `tsconfig.json` file, especially the `baseUrl` and `paths` properties.
+- If you want make changes to developement server configuration, you can do so in the `vite.config.js` file.
 - Don't forget to run `npm run dev` or `yarn dev` to start the development server and see your application running.
 
 ## Conclusion

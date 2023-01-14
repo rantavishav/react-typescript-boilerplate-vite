@@ -1,0 +1,34 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+logs/
+
+# Cache files
+.vite-cache/
+
+# Environment variables
+.env
+
+# Vite configuration
+vite.config.js
+
+# TypeScript compilation output
+lib/
+
+# Coverage directory
+coverage/
+
+# VSCode files
+.vscode/
+!.vscode/extensions.json
+
+# yarn lockfile
+yarn.lock
+
+# npm build folder
+build/
+

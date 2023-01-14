@@ -7,7 +7,7 @@ import { CircularLoader } from './components/statelessComponent';
 import './styles/global.css';
 
 export default function App() {
-  const isLoggedIn = false;
+  const isLoggedIn = false; // get from local storage or redux store
   const routes = isLoggedIn ? userRoutes : guestRoutes;
 
   const mainContent = routes.map((route) => {
@@ -23,7 +23,9 @@ export default function App() {
   return (
     <>
       <Suspense fallback={<CircularLoader />}>
-        <Routes>{mainContent}</Routes>
+        <div className='App'>
+          <Routes>{mainContent}</Routes>
+        </div>
       </Suspense>
     </>
   );

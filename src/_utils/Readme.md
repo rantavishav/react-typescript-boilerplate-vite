@@ -1,6 +1,6 @@
 # Util
 
-This folder contains utility functions and modules that are used throughout the project.
+This folder contains shared utility functions and modules that are used throughout the project.
 
 ## Contents
 

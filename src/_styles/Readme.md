@@ -5,7 +5,6 @@ This folder contains all of the CSS styles for the project.
 ## Contents
 
 - `global.css`: contains global styles for the project
-- `components`: contains component-specific styles
 
 ## Usage
 
@@ -13,7 +12,6 @@ This folder contains all of the CSS styles for the project.
 
    ```javascript
    import './styles/global.css';
-   import './styles/components/Button.css';
    ```
 
 2. Apply the styles to the component or module as needed.

@@ -2,9 +2,9 @@ import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { guestRoutes, userRoutes } from './routes';
-import { CircularLoader } from './components/statelessComponent';
+import { CircularLoader } from './_components/UI';
 
-import './styles/global.css';
+import './_styles/global.css';
 
 export default function App() {
   const isLoggedIn = false; // get from local storage or redux store

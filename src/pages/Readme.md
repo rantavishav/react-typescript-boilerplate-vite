@@ -10,6 +10,15 @@ Dependending on the project requirements, this folder structure may change. The 
 - `userPages`: contains all the pages that are accessible to logged in users.
 - `adminPages`: contains all the pages that are accessible to admin users.
 
+Each page consist of following files:
+
+- `index.tsx`: contains the component that represents the page.
+- `styles.css`: contains the styles for the specific page.
+- `readme.md`: contains the documentation for the specific page.
+- `type.ts`: contains the types for the specific page.
+- `component`: contains the components used in the specific page.
+- `utils`: contains the utility functions used in the specific page.
+
 ## Usage
 
 1. Import the desired component into the module where it will be used.

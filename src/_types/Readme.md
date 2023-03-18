@@ -1,6 +1,6 @@
 # Types
 
-This folder contains all of the TypeScript type definitions for the project.
+This folder contains all of the GLOBAL/Shared TypeScript type definitions for the project.
 
 ## Contents
 

@@ -1,12 +1,12 @@
-# Stateful Components
+# Logical Components
 
 This folder contains all of the components used in the project.
 
 ## Contents
 
 - This folder consisit of two folders:
-  - `statelessComponents`: contains all the stateless components used in the project.
-  - `statefulComponents`: contains all the stateful components used in the project.
+  - `logicalComponents`: contains all the logical components used in the project.
+  - `UI`: contains all the UI components used in the project.
 
 > **Note:** Each sub folder has an `index.ts` file that exports all of the files in that folder. This is to make it easier to import files from the folder.
 

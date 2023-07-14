@@ -1,23 +1,28 @@
 # Routes
 
-This folder contains all of the routing configuration for the application.
+All the app’s routing logic resides here.
+Our app uses “react-router-dom” (version-6) for routing implementation.
 
 ## Contents
 
-- `index.tsx`: contains array of `publicRoutes` and `privateRoutes`.
+- This folder consist mainly 2 types of routes are included, public & private, where private being the ones that require authentication.
+- “publicRoute.ts” is a component to keep all the routes that can be accessed without authentication.
+- “privateRoute.ts” is a component to add a check for user authentication for secure/private routes.
+
+  > **Note:** It's recommended to have an `index.ts` file that exports all of the files in that folder. This is to make it easier to import files from the folder.
+
+## File Naming Convention
+
+- Folder and file name should be in camelCase.
+- Try to create named-exports instead of default exports for all the configs. This will avoid any naming conflicts.
 
 ## Usage
 
-1. Import the `routes.tsx` file into the main entry point of the application.
+To use an config, import it from the folder's `index.ts` file.
 
-   ```javascript
-   import { Router } from 'react-router-dom';
-   import { createBrowserHistory } from 'history';
-   import routes from './routes';
+## Props
 
-   const history = createBrowserHistory();
-   ReactDOM.render(<Router history={history}>{routes}</Router>, document.getElementById('root'));
-   ```
+It has no props.
 
 ## Setup
 
@@ -25,4 +30,4 @@ This folder has no additional setup required.
 
 ## Dependencies
 
-This folder has dependency on react-router-dom and history. Please make sure to install them before use
+This folder files is created based on assuming tat this project uses "react-router-dom" (version 6).

@@ -1,18 +1,24 @@
-# Assets
+/assets :
 
-This folder contains all of the static assets used in the project.
+1. As the name suggests, all the static assets should reside here.
+2. This can include but not limited to images, logos, vector icons, fonts, etc.
+
+# Context
+
+All the app’s static assets are to be kept at this path.
 
 ## Contents
 
-- `images`: contains all image assets used in the project
-- `fonts`: contains all font files used in the project
-- `icons`: contains all icons used in the project
+- This folder consists different assets files (e.g fonts, images).
 
-> **Note:** Each asset folder has an `index.ts` file that exports all of the assets in that folder. This is to make it easier to import assets from the folder.
+## File Naming Convention
 
-## Usage
+- All the files and folder names should be in pascalCase.
+- Try to create named-exports instead of default exports for all the configs. This will avoid any naming conflicts.
 
-To use an asset, import it from the folder's `index.ts` file.
+## Props
+
+It has no props.
 
 ## Setup
 
@@ -20,4 +26,4 @@ This folder has no additional setup required.
 
 ## Dependencies
 
-This folder has no dependencies.
+It has no dependencies.

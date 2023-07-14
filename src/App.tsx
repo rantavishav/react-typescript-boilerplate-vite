@@ -1,14 +1,13 @@
-import { Suspense } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Suspense, useContext } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { guestRoutes, userRoutes } from './routes';
-import { CircularLoader } from './_components/UI';
-
-import './_styles/global.css';
+import { privateRoute, publicRoute } from './routes';
+import { AuthContext } from './context';
+import { GuestLayout, UserLayout } from './components'; // import required component from the components "index.ts" file which will further import different components from further nested folders inside components folder
 
 export default function App() {
-  const isLoggedIn = false; // get from local storage or redux store
-  const routes = isLoggedIn ? userRoutes : guestRoutes;
+  const { user } = useContext(AuthContext);
+  const routes = user ? privateRoute : publicRoute;
 
   const mainContent = routes.map((route) => {
     return route.component ? (
@@ -20,13 +19,21 @@ export default function App() {
     );
   });
 
-  return (
-    <>
-      <Suspense fallback={<CircularLoader />}>
-        <div className='App'>
+  if (!user) {
+    return (
+      <GuestLayout>
+        <Suspense /* fallback={<Loader />} */>
           <Routes>{mainContent}</Routes>
-        </div>
+        </Suspense>
+      </GuestLayout>
+    );
+  }
+
+  return (
+    <UserLayout>
+      <Suspense /* fallback={<Loader />} */>
+        <Routes>{mainContent}</Routes>
       </Suspense>
-    </>
+    </UserLayout>
   );
 }
